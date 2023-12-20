@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "788088983016",
+    "project_id": "caretoday-31959",
+    "storage_bucket": "caretoday-31959.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788088983016:android:a88b2bf6d36700aeb5a85d",
+        "android_client_info": {
+          "package_name": "com.caretoday"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxp73XUYbL4moAzRp8B1_-vDUAGHVMWps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788088983016:android:47281f54f3cc2affb5a85d",
+        "android_client_info": {
+          "package_name": "com.example.care_to_day"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxp73XUYbL4moAzRp8B1_-vDUAGHVMWps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
