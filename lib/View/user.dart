@@ -139,7 +139,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               labelText: "Role",
                               border: OutlineInputBorder(),
                             ),
-                            items: <String>['Owner', 'Guard', 'Tenant']
+                            items: <String>['Donor', 'Receiver']
                                 .map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
