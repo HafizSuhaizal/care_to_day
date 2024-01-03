@@ -38,16 +38,18 @@ dependencies:
   package_info_plus: ^4.2.0
   firebase_core: ^2.22.0
   firebase_auth: ^4.14.0
-  cloud_firestore: ^4.13.2
+  cloud_firestore: ^4.13.6
   camera: ^0.10.5+5
   path_provider: ^2.1.1
   path: ^1.8.3
   google_fonts: ^6.1.0
-  firebase_messaging: ^14.7.8
+  firebase_messaging: ^14.7.9
   firebase_analytics: ^10.7.4
   cron: ^0.5.1
   http: ^1.1.2
   animate_do: ^3.1.2
+  image_picker: ^1.0.5
+  google_maps_flutter: ^2.5.0
 
 dev_dependencies:
   flutter_test:
