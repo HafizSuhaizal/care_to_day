@@ -1,3 +1,4 @@
+import 'package:care_to_day/View/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,7 +11,7 @@ class UserProfile extends StatefulWidget {
 
 class _UserProfileState extends State<UserProfile> {
 
-
+  final TextEditingController usernameCtrl = TextEditingController();
 
 
   @override
@@ -53,7 +54,9 @@ class _UserProfileState extends State<UserProfile> {
 
                 ElevatedButton(
                 
-                  onPressed: (){}, 
+                  onPressed: () => Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => ProfilePage())
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -73,7 +76,47 @@ class _UserProfileState extends State<UserProfile> {
                     foregroundColor: MaterialStatePropertyAll(Colors.white),
                     
                   ),
-                )
+                ),
+
+                const SizedBox(height: 10),
+                
+
+                Container(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                        
+                          Text("Phone", style: GoogleFonts.poppins(
+                                    fontSize: 18
+                                  ), 
+                          ),
+                
+                           
+                
+                          Text("Email", style: GoogleFonts.poppins(
+                                    fontSize: 18
+                                  ), 
+                          ),
+                
+                          Text("Password", style: GoogleFonts.poppins(
+                                    fontSize: 18
+                                  ), 
+                          ),
+                
+                          Text("Birthday", style: GoogleFonts.poppins(
+                                    fontSize: 18
+                                  ), 
+                          ),
+                          
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
             
             
               ],
