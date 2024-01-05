@@ -81,6 +81,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
+  circle_nav_bar:
+    dependency: "direct main"
+    description:
+      name: circle_nav_bar
+      sha256: "9aa1702ba2ea9e93f8bbaf8ab280b86a9a041454de1c1c8d72005e71303049ab"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1+1"
   clock:
     dependency: transitive
     description:
