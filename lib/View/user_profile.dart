@@ -9,6 +9,10 @@ class UserProfile extends StatefulWidget {
 }
 
 class _UserProfileState extends State<UserProfile> {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,12 +27,58 @@ class _UserProfileState extends State<UserProfile> {
         
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
+        child: Container(
+          child: Center(
+            child: Column(
+              children: [
+
+                Container(
+                  width: 150,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: NetworkImage(
+                        "https://i.mydramalist.com/xYozyc.jpg",
+                      ),
+                      repeat: ImageRepeat.noRepeat
+                    ),
+                    
+                    color: Colors.blue
+                  ),
+                ),
+
+                const SizedBox(height: 10),
+
+                ElevatedButton(
+                
+                  onPressed: (){}, 
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      
+                      Text("Edit profile", style: GoogleFonts.poppins(
+                          fontSize: 18
+                        ), 
+                      ),
+
+                      Spacer(),
+
+                      Icon(Icons.arrow_forward_ios_sharp),
+                    ],
+                  ), style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all(Size(180.0, 50.0)),
+                    backgroundColor: MaterialStatePropertyAll(Color(0xFFF85989)),
+                    foregroundColor: MaterialStatePropertyAll(Colors.white),
+                    
+                  ),
+                )
             
-
-
-          ],
+            
+              ],
+            ),
+          ),
         ),
       ),
     );

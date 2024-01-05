@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+//import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,7 +16,7 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseStorage _storage = FirebaseStorage.instance;
+  //final FirebaseStorage _storage = FirebaseStorage.instance;
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
@@ -39,17 +39,17 @@ class _ProfilePageState extends State<ProfilePage> {
       final profile = 'profile_pictures/${user.uid}.png';
 
       // Upload image to cloud storage
-      final UploadTask task = _storage.ref().child(profile).putData(_image!);
+      //final UploadTask task = _storage.ref().child(profile).putData(_image!);
 
       // get download URL of the uploaded image
-      final TaskSnapshot snapshot = await task;
-      final imageUrl = await snapshot.ref.getDownloadURL();
+      //final TaskSnapshot snapshot = await task;
+      //final imageUrl = await snapshot.ref.getDownloadURL();
 
       // Update user's firestore document with the image url
-      await FirebaseFirestore.instance
+      /* await FirebaseFirestore.instance
           .collection('users')
           .doc(user.uid)
-          .update({'profilePictureUrl': imageUrl});
+          .update({'profilePictureUrl': imageUrl}); */
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
