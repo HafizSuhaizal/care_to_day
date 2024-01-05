@@ -63,10 +63,10 @@ class _HomeNaviState extends State<HomeNavi> {
            * icons on navigation bar
            * will be appeared when user is at current page
            */
-          Icon(Icons.home, color: Colors.white, size: 35,),
-          Icon(Icons.search, color: Colors.white, size: 35,),
-          Icon(Icons.forum, color: Colors.white, size: 35,),
-          Icon(Icons.person, color: Colors.white, size: 35,),
+          Icon(Icons.home, color: Colors.red, size: 35,),
+          Icon(Icons.event, color: Colors.red, size: 35,),
+          Icon(Icons.notifications, color: Colors.red, size: 35,),
+          Icon(Icons.person, color: Colors.red, size: 35,),
         ],
 
         /**
@@ -77,19 +77,19 @@ class _HomeNaviState extends State<HomeNavi> {
           Text("Home", style: GoogleFonts.poppins(
             color: Colors.white, fontWeight: FontWeight.bold
           ),),
-          Text("Search", style: GoogleFonts.poppins(
+          Text("Events", style: GoogleFonts.poppins(
               color: Colors.white, fontWeight: FontWeight.bold
           ),),
-          Text("Forum", style: GoogleFonts.poppins(
+          Text("Notification", style: GoogleFonts.poppins(
               color: Colors.white, fontWeight: FontWeight.bold
           ),),
           Text("Account", style: GoogleFonts.poppins(
             color: Colors.white, fontWeight: FontWeight.bold
           ),),
         ],
-        color: Colors.white,
-        height: 60,
-        circleWidth: 60,
+        color: Colors.red,
+        height: 70,
+        circleWidth: 70,
         activeIndex: tabIndex,
         onTap: (index) {
           tabIndex = index;
@@ -108,14 +108,9 @@ class _HomeNaviState extends State<HomeNavi> {
         /**
          * Background color of the bar
          */
-        gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [
-            Color.fromRGBO(249, 151, 119, 1),
-            Color.fromRGBO(98, 58, 162, 1),
-          ],
-        ),
+        
+
+        circleColor: Colors.white,
       ),
       body: PageView(
         controller: pageController,
