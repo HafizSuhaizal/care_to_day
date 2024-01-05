@@ -57,7 +57,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: Container(
         width: double.infinity,
         height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(color: Color(0xffffffff)),
+        decoration: const BoxDecoration(color: Color(0xffffffff)),
         child: Stack(
           children: [
             Positioned(
@@ -75,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height - 74,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xffffffff),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(45),
@@ -91,7 +91,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         children: [
                           TextFormField(
                             controller: _nameController,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               labelText: "Name",
                               border: OutlineInputBorder(),
                             ),
@@ -102,11 +102,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               return null;
                             },
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           TextFormField(
                             controller: _emailController,
                             keyboardType: TextInputType.emailAddress,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               labelText: "Email",
                               border: OutlineInputBorder(),
                             ),
@@ -117,11 +117,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               return null;
                             },
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           TextFormField(
                             controller: _passwordController,
                             obscureText: true,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               labelText: "Password",
                               border: OutlineInputBorder(),
                             ),
@@ -132,10 +132,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               return null;
                             },
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           DropdownButtonFormField<String>(
                             value: _selectedRole,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               labelText: "Role",
                               border: OutlineInputBorder(),
                             ),
@@ -158,10 +158,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               return null;
                             },
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           TextFormField(
                             controller: _addressController,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               labelText: "Address",
                               border: OutlineInputBorder(),
                             ),
@@ -172,11 +172,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               return null;
                             },
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           TextFormField(
                             controller: _phoneController,
                             keyboardType: TextInputType.phone,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               labelText: "Phone Number",
                               border: OutlineInputBorder(),
                             ),
@@ -187,16 +187,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               return null;
                             },
                           ),
-                          SizedBox(height: 20),
+
+                          const SizedBox(height: 20),
+
                           ElevatedButton(
                             onPressed: _handleSignUp,
-                            child: Text("Sign Up"),
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xffddc5ad),
+                              backgroundColor: const Color(0xffddc5ad),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6),
                               ),
                             ),
+                            child: const Text("Sign Up"),
                           ),
                         ],
                       ),

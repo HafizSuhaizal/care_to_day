@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height - 74,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xffffffff),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(45),
@@ -70,8 +70,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   key: _formKey,
                   child: Column(
                     children: [
-                      SizedBox(height: 50),
-                      Text(
+                      const SizedBox(height: 50),
+                      const Text(
                         "let’s login and browse",
                         style: TextStyle(
                           fontSize: 24,
@@ -80,8 +80,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           color: Color(0xcebdbdbd),
                         ),
                       ),
-                      SizedBox(height: 55),
-                      Text(
+                      const SizedBox(height: 55),
+                      const Text(
                         "Welcome Back !",
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -90,13 +90,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           color: Color(0xff111111),
                         ),
                       ),
-                      SizedBox(height: 31),
+                      const SizedBox(height: 31),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 26),
+                        padding: const EdgeInsets.symmetric(horizontal: 26),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "Email :",
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -105,10 +105,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: Color(0xff292828),
                               ),
                             ),
-                            SizedBox(height: 12),
+                            const SizedBox(height: 12),
                             TextFormField(
                               controller: _emailController,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: "Email",
                               ),
@@ -119,8 +119,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 return null;
                               },
                             ),
-                            SizedBox(height: 41),
-                            Text(
+                            const SizedBox(height: 41),
+                            const Text(
                               "Password :\n",
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -129,11 +129,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: Color(0xff303030),
                               ),
                             ),
-                            SizedBox(height: 12),
+                            const SizedBox(height: 12),
                             TextFormField(
                               controller: _passwordController,
                               obscureText: true,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: "Password",
                               ),
@@ -144,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 return null;
                               },
                             ),
-                            SizedBox(height: 45),
+                            const SizedBox(height: 45),
                             Center(
                               child: SizedBox(
                                 width: 224,
@@ -152,12 +152,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: ElevatedButton(
                                   onPressed: _handleLogin,
                                   style: ElevatedButton.styleFrom(
-                                    primary: Color(0xffddc5ad),
+                                    backgroundColor: const Color(0xffddc5ad),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(6),
                                     ),
                                   ),
-                                  child: Text(
+
+                                  child: const Text(
                                     "Login",
                                     style: TextStyle(
                                       fontSize: 24,
@@ -167,14 +168,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
+
                             if (_isLoading)
-                              CircularProgressIndicator(),
+                              const CircularProgressIndicator(),
+
                             if (_errorMessage.isNotEmpty)
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
                                   _errorMessage,
-                                  style: TextStyle(color: Colors.red),
+                                  style: const TextStyle(
+                                      color: Colors.red),
                                   textAlign: TextAlign.center,
                                 ),
                               ),

@@ -9,7 +9,7 @@ class AfterLoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome'),
+        title: const Text('Welcome'),
       ),
       body: Center(
         child: Column(
@@ -17,14 +17,14 @@ class AfterLoginScreen extends StatelessWidget {
           children: <Widget>[
             Text(
               'Hello, $username!',
-              style: TextStyle(fontSize: 24),
+              style: const TextStyle(fontSize: 24),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Add your test functionality here
               },
-              child: Text('Test Button'),
+              child: const Text('Test Button'),
             ),
           ],
         ),
