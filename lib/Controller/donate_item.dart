@@ -8,3 +8,4 @@ class DonateItemController {
     await firestore.collection("donations").add(donation.toMap());
   }
 }
+

@@ -38,13 +38,12 @@ dependencies:
   package_info_plus: ^4.2.0
   firebase_core: ^2.22.0
   firebase_auth: ^4.14.0
-  cloud_firestore: ^4.13.2
-  firebase_storage: ^11.5.5
+  cloud_firestore: ^4.13.6
   camera: ^0.10.5+5
   path_provider: ^2.1.1
   path: ^1.8.3
   google_fonts: ^6.1.0
-  firebase_messaging: ^14.7.8
+  firebase_messaging: ^14.7.9
   firebase_analytics: ^10.7.4
   cron: ^0.5.1
   http: ^1.1.2
@@ -75,8 +74,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-  - assets/
+  #assets:
+    # - lib/images/puma.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

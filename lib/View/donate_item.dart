@@ -25,13 +25,13 @@ class _DonateItemScreenState extends State<DonateItemScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Donate Item')),
+      appBar: AppBar(title: Text('Donate Item')),
       body: SingleChildScrollView(
         child: Column(
           children: [
             DropdownButton<String>(
               value: selectedCategory,
-              hint: const Text('Select Category'),
+              hint: Text('Select Category'),
               items: categories.map((String category) {
                 return DropdownMenuItem<String>(
                   value: category,
