@@ -1,3 +1,5 @@
+import 'package:care_to_day/View/homepage.dart';
+import 'package:care_to_day/View/navigationbar.dart';
 import 'package:care_to_day/View/test.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -168,6 +170,18 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
+
+                            Center(
+                              child: TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, 
+                                    MaterialPageRoute(builder: (context)=>HomeNavi()));
+                                },
+                                child: Text("Go to home page")
+                              ),
+                            ),
+
+                            
 
                             if (_isLoading)
                               const CircularProgressIndicator(),
