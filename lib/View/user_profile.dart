@@ -82,7 +82,7 @@ class _UserProfileState extends State<UserProfile> {
                       ],
                     ), style: ButtonStyle(
                       fixedSize: MaterialStateProperty.all(Size(180.0, 50.0)),
-                      backgroundColor: MaterialStatePropertyAll(Color(0xFFF85989)),
+                      backgroundColor: MaterialStatePropertyAll(Color(0xEDFF4848)),
                       foregroundColor: MaterialStatePropertyAll(Colors.white),
                       
                     ),

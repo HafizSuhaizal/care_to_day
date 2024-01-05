@@ -63,10 +63,10 @@ class _HomeNaviState extends State<HomeNavi> {
            * icons on navigation bar
            * will be appeared when user is at current page
            */
-          Icon(Icons.home, color: Colors.red, size: 35,),
-          Icon(Icons.event, color: Colors.red, size: 35,),
-          Icon(Icons.notifications, color: Colors.red, size: 35,),
-          Icon(Icons.person, color: Colors.red, size: 35,),
+          Icon(Icons.home, color: Color(0xEDFF4848), size: 35,),
+          Icon(Icons.event, color: Color(0xEDFF4848), size: 35,),
+          Icon(Icons.notifications, color: Color(0xEDFF4848), size: 35,),
+          Icon(Icons.person, color: Color(0xEDFF4848), size: 35,),
         ],
 
         /**
@@ -87,7 +87,7 @@ class _HomeNaviState extends State<HomeNavi> {
             color: Colors.white, fontWeight: FontWeight.bold
           ),),
         ],
-        color: Colors.red,
+        color: Color(0xEDFF4848),
         height: 70,
         circleWidth: 70,
         activeIndex: tabIndex,

@@ -13,24 +13,46 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home",style: GoogleFonts.poppins(
-          fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold
-        ),),
+        title: Row(
+          children: [
+            Text("Caring",style: GoogleFonts.epilogue(
+              fontSize: 25, color: const Color(0xEDFF4848), fontWeight: FontWeight.bold
+            ),),
+
+            Text("Hub",style: GoogleFonts.epilogue(
+              fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold
+            ),),
+          ],
+        ),
+
+        actions: [
+                Container(
+                  padding: EdgeInsets.all(10),
+                    width: 50,
+                    height: 50,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: NetworkImage(
+                          "https://i.mydramalist.com/xYozyc.jpg",
+                        ),
+                        repeat: ImageRepeat.noRepeat
+                      ),
+                      
+                      color: Colors.blue
+                    ),
+          ),
+        ],
       ),
 
       body: Container(
         height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: NetworkImage(
-              "https://img.freepik.com/premium-photo/donation-concept-donation-box-with-clothes-background-wall-vertical-photo_326533-1369.jpg"
-            )
-          )
+        decoration: const BoxDecoration(
+          
         ),
         child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white38
-          ),
+          
         ),
       ),
     );
