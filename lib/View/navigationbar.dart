@@ -1,6 +1,8 @@
 import 'dart:convert';
 
+import 'package:care_to_day/View/events.dart';
 import 'package:care_to_day/View/homepage.dart';
+import 'package:care_to_day/View/notifications.dart';
 import 'package:care_to_day/View/profile_page.dart';
 import 'package:care_to_day/View/user_profile.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +18,10 @@ import 'package:http/http.dart' as http;
 
 
 class HomeNavi extends StatefulWidget {
-
-  const HomeNavi({Key? key}) : super(key: key);
+  
+  const HomeNavi({Key? key, required this.useremail, required this.tabIndexes}) : super(key: key);
+  final String useremail;
+  final int tabIndexes;
   // const HomeNavi({required this.username});
 
   @override
@@ -38,6 +42,8 @@ class _HomeNaviState extends State<HomeNavi> {
 
   @override
   void initState() {
+    _tabIndex = widget.tabIndexes;
+
     super.initState();
     // to set the default page to be initiated based on tab index
     pageController = PageController(initialPage: _tabIndex);
@@ -130,9 +136,9 @@ class _HomeNaviState extends State<HomeNavi> {
            * which is related to variable tabIndex later on
            */
           HomePage(),
-          HomePage(),
-          HomePage(),
-          UserProfile(),
+          Events(),
+          NotificationPage(),
+          UserProfile(useremail: widget.useremail,),
 
         ],
       ),

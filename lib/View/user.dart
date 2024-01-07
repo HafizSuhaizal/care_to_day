@@ -24,6 +24,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   void _handleSignUp() async {
     if (_formKey.currentState!.validate()) {
       try {
+        
         UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
           email: _emailController.text,
           password: _passwordController.text,
@@ -82,11 +83,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     topRight: Radius.circular(42),
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(27.0),
-                  child: Form(
-                    key: _formKey,
-                    child: SingleChildScrollView(
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.all(27.0),
+                    child: Form(
+                      key: _formKey,
                       child: Column(
                         children: [
                           TextFormField(
@@ -187,9 +188,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               return null;
                             },
                           ),
-
+                      
                           const SizedBox(height: 20),
-
+                      
                           ElevatedButton(
                             onPressed: _handleSignUp,
                             style: ElevatedButton.styleFrom(

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserProfile extends StatefulWidget {
-  const UserProfile({super.key});
+  const UserProfile({required this.useremail});
+  final String useremail;
 
   @override
   State<UserProfile> createState() => _UserProfileState();
@@ -12,7 +13,16 @@ class UserProfile extends StatefulWidget {
 class _UserProfileState extends State<UserProfile> {
 
   final TextEditingController usernameCtrl = TextEditingController();
+  final TextEditingController phoneCtrl = TextEditingController();
+  final TextEditingController emailCtrl = TextEditingController();
+  final TextEditingController passwordCtrl = TextEditingController();
+  final TextEditingController birthdayCtrl = TextEditingController();
 
+  @override
+  void initState() async{
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,6 +114,7 @@ class _UserProfileState extends State<UserProfile> {
                       ),
             
                       TextField(
+                        controller: usernameCtrl,
                         enabled: false,
                         decoration: InputDecoration(
                           filled: true,
@@ -151,6 +162,7 @@ class _UserProfileState extends State<UserProfile> {
             
                       TextField(
                         enabled: false,
+                        controller: emailCtrl,
                         decoration: InputDecoration(
                           filled: true,
                           fillColor: const Color(0xB3C9C9C9),
@@ -219,12 +231,6 @@ class _UserProfileState extends State<UserProfile> {
                     ],
                   ),
             
-            
-                  
-            
-                  
-              
-              
                 ],
               ),
             ),

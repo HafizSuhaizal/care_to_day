@@ -1,6 +1,7 @@
 import 'package:care_to_day/View/homepage.dart';
 import 'package:care_to_day/View/navigationbar.dart';
 import 'package:care_to_day/View/test.dart';
+import 'package:care_to_day/View/user.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -27,8 +28,9 @@ class _LoginScreenState extends State<LoginScreen> {
           email: _emailController.text.trim(),
           password: _passwordController.text.trim(),
         );
+
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => AfterLoginScreen(username: '',),
+          builder: (context) => HomeNavi(useremail: _emailController.text, tabIndexes: 0,)
           // RegisteredVehiclesView
           // builder: (context) => PatrolScheduleScreen(),
         ));
@@ -56,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Positioned(
-            top: 220,
+            top: 170,
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height - 74,
@@ -159,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       borderRadius: BorderRadius.circular(6),
                                     ),
                                   ),
-
+      
                                   child: const Text(
                                     "Login",
                                     style: TextStyle(
@@ -170,22 +172,27 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
+                            
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Text("Don't have an account? "),
 
-                            Center(
-                              child: TextButton(
-                                onPressed: (){
-                                  Navigator.push(context, 
-                                    MaterialPageRoute(builder: (context)=>HomeNavi()));
-                                },
-                                child: Text("Go to home page")
-                              ),
+                                TextButton(
+                                  onPressed: (){
+                                    Navigator.push(context, 
+                                      MaterialPageRoute(builder: (context)=>SignUpScreen()));
+                                  },
+                                  child: Text("Sign Up Now")
+                                ),
+                              ],
                             ),
 
-                            
-
+                           
+      
                             if (_isLoading)
                               const CircularProgressIndicator(),
-
+      
                             if (_errorMessage.isNotEmpty)
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
